@@ -1,0 +1,9 @@
+#sortingTable th, td{
+    border: 1px solid fuchsia;
+}
+
+#sortingTable {
+    border-collapse: collapse;
+    width: 50%;
+    height: 400px;
+}
