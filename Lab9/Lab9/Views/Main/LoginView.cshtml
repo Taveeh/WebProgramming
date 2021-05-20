@@ -1,0 +1,29 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="~/Content/style.css">
+    <title>Log Reports</title>
+    <style>
+        html, body {
+            height: 650px;
+            width: 99%;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<form method="POST" action="/Main/Login" style="display: flex; flex-direction: column; width: 30%">
+    Username: <input type="text" id="username" name="username">
+    Password: <input type="password" id="password" name="password">
+    <input type="submit" value="Login" name="loginButton">
+</form>
+</body>
+
+<script src="~/Scripts/script.js" type="text/javascript"></script>
+</html>
