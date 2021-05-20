@@ -44,14 +44,19 @@ $('tfoot td').on('click', function() {
 function swap(value) {
     const rows = $('#sortingTable tr').toArray();
     if (value === 3) {
-        for (const row of rows) {
-            row.insertBefore(row.children[3], row.children[0]);
-            row.insertBefore(row.children[1], row.children[4]);
-        }
+        // for (const row of rows) {
+        //     row.insertBefore(row.children[3], row.children[0]);
+        //     row.insertBefore(row.children[1], row.children[4]);
+            rows.forEach((row) => row.insertBefore(row.children[3], row.children[0]))
+            rows.forEach((row) => row.insertBefore(row.children[1], row.children[4]))
+
+        // }
     } else {
-        for (const row of rows) {
-            row.insertBefore(row.children[value + 1], row.children[value]);
-        }
+        // for (const row of rows) {
+            // row.insertBefore(row.children[value + 1], row.children[value]);
+            rows.forEach((row) => row.insertBefore(row.children[value + 1], row.children[value]))
+
+        // }
     }
 }
 

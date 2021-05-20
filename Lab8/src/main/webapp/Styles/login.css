@@ -1,0 +1,28 @@
+.input-field {
+    display: flex;
+    justify-content: space-around;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-content: center;
+}
+.input-field label {
+    color: blue;
+}
+
+.buttons {
+    padding-left: 50%;
+}
+input {
+    padding: .5rem;
+}
+label {
+    color: #435960;
+    font-weight: bold;
+}
+input {
+    font-size: 1em;
+    padding: .5rem;
+}
