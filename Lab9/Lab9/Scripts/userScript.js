@@ -34,7 +34,7 @@ const showLogReports = () => {
     let newBody = document.createElement('tbody');
     $.ajax({
         type: 'GET',
-        url: "http://localhost:5000/Main/GetAllLogs",
+        url: "/Main/GetAllLogs",
         success: (data) => {
             console.log(data);
             insertData(newBody, data)
@@ -48,7 +48,7 @@ const showLogsByUser = () => {
     let newBody = document.createElement('tbody');
     $.ajax({
         type: 'GET',
-        url: "http://localhost:5000/Main/GetLogsByUser",
+        url: "/Main/GetLogsByUser",
         success: (data) => {
             insertData(newBody, data);
         }
@@ -61,7 +61,7 @@ const showLogsBySeverity = (severity) => {
     let newBody = document.createElement('tbody');
     $.ajax({
         type: 'GET',
-        url: "http://localhost:5000/Main/GetLogsBySeverity",
+        url: "/Main/GetLogsBySeverity",
         data: {severity: severity},
         success: (data) => {
             insertData(newBody, data);
@@ -75,7 +75,7 @@ const showLogsByType = (type) => {
     let newBody = document.createElement('tbody');
     $.ajax({
         type: 'GET',
-        url: "http://localhost:5000/Main/GetLogsByType",
+        url: "/Main/GetLogsByType",
         data: {action: 'getLogsByType', type: type},
         success: (data) => {
             insertData(newBody, data);
@@ -157,7 +157,7 @@ $(document).ready(() => {
         console.log([type, severity, currentUser, date, log]);
         $.ajax({
             type: "GET",
-            url: "http://localhost:5000/Main/AddLog",
+            url: "/Main/AddLog",
             data: {
                 logType: type,
                 severity: severity,
@@ -181,7 +181,7 @@ $(document).ready(() => {
             let id = Number($('#idField').val());
             $.ajax({
                 type: "GET",
-                url: "http://localhost:5000/Main/RemoveLog",
+                url: "/Main/RemoveLog",
                 data: {
                     id: id
                 },
@@ -201,7 +201,7 @@ $(document).ready(() => {
     $('#logoutButton').click(() => {
         $.ajax({
             type: 'DELETE',
-            url: 'http://localhost:5000/Main/Logout',
+            url: '/Main/Logout',
             success: () => {
                 location.href = "/Main/Login";
             }
